@@ -6,7 +6,7 @@ var rootPath = path.normalize(__dirname + '/../'); // normalizes to base path
 module.exports = {
     development: {
         rootPath: rootPath,
-        database: 'mongodb://localhost/express-todo',
+        database: 'mongodb://localhost/todoapp',
         port: process.env.PORT || 3000
     },
     production: {

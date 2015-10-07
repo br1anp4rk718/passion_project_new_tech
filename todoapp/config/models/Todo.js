@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema; //we're compiling our model
 
-// this is our models and our schema formatt
+// this is our models and our schema format
 var todoSchema = new Schema({
     content: String,
     completed: { type: Boolean, default: false },

@@ -1,4 +1,4 @@
-var express = require('express');///we're just requiring the express module.
+var express = require('express');///we're just requiring the express module.--
 var app = express();
 
 
@@ -91,10 +91,10 @@ var app = express();
 //   mountpath: '/' }
 
 
-// Environments
+// Environments 
+//evn will default to development for now - 
 var env = process.env.NODE_ENV || 'development';
 var envConfig = require('./config/env')[env];
-
 // Express configuration -- require() loads an external module.
 //using require config without the .jds e
 require('./config/config')(app, envConfig);

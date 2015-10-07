@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 //module.exports = export (or "expose") the internally scoped functions
 module.exports = {
     all: function(req, res){
-        console.log('we are in todo.all')
+        console.log('show ALL the stuffff')
         Todo.find({}, function(err, todos){
             console.log('in the callback')
             res.render('todos', { todos: todos });
@@ -15,7 +15,6 @@ module.exports = {
         var todoContent = req.body.content;
         // create todo
         Todo.create({ content: todoContent }, function(err, todo){
-            if(err) res.render('error', { error: 'Error creating your todo :('})
             // reload collection
             res.redirect('/todos');
         });
@@ -24,7 +23,6 @@ module.exports = {
         var id = req.params.id;
 
         Todo.findByIdAndRemove(id, function(err, todo){
-            if(err) res.render('error', { error: 'Error deleting todo'});
             res.redirect('/todos');
         });
     },
